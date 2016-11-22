@@ -1,2 +1,7 @@
-<h1>Tasks#show</h1>
-<p>Find me in app/views/tasks/show.html.erb</p>
+<h1><%= @task.name %></h1>
+<p><%= @task.date %></p>
+<%= form_for(@task) do |f| %>
+  <%= f.label :done, "Fait?"%>
+  <%= f.check_box :done %>
+  <%= f.submit %>
+<%end%>
